@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@media screen and (min-width: 800px) {
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+* {
+    font-family: "Karla";
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--Light-Gray);
+    display: flex;
+    justify-content: center;
+    filter:drop-shadow(0 0 0.5rem grey);
+}
+.grid {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "header header"
+    "left right";  
+}
+.header {
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    grid-area: header;
+}
+.header> h1 {
+    margin: 2em;
+    color: var(--Cyan);
+}
+.header>h2 {
+    margin-left: 2em;
+    margin-right: 2em;
+    color: var(--Bright-Yellow);
+}
+.header>p{
+    line-height: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    color: var(--Grayish-Blue);
+}
+
+
+.left {
+    background-color:  hsla(179, 62%, 43%, 0.5);
+    border-radius: 0 0 0 10px;
+    grid-area: left;
+    color: white;
+}
+.left> h2 {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+.price {
+    font-size: 2em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+sup {
+    color: var(--Light-Gray);
+}
+.description {
+    color: var(--Light-Gray);
+    margin-left: 2em;
+}
+button {
+    width: 80%;
+    height: 25%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Bright-Yellow);
+    display: block;
+    margin: auto;
+}
+button:hover {
+    filter:drop-shadow(0 0 0.5rem rgb(0, 0, 0));
+}
+
+.right {
+    background-color: var(--Cyan);
+    border-radius: 0 0 10px 0;
+    grid-area: right;
+    padding-bottom: 2em;
+}
+.right>h2 {
+    margin-left: 2em;
+    margin-top: 2em;
+    color: white;
+}
+li {
+    list-style: none;
+    margin-right: 2em;
+    color: var(--Light-Gray);
+}}
